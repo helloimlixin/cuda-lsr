@@ -1,0 +1,76 @@
+{
+  "model_id": "openai-community/gpt2-xl",
+  "init": "pretrained",
+  "world_size": 4,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "model_params": 1557611200,
+  "muon_mode": "serial",
+  "muon_batch_matrices": 8,
+  "muon_lr": 0.001,
+  "muon_lr_adjust": "original",
+  "muon_ns_steps": 5,
+  "adam_lr": 0.0001,
+  "seq_len": 512,
+  "micro_batch": 1,
+  "grad_accum": 2,
+  "global_tokens_per_step": 4096,
+  "steps": 40,
+  "warmup_steps": 10,
+  "median_step_ms": 1519.4020385742188,
+  "median_optimizer_ms": 277.07618713378906,
+  "median_muon_ms": 273.9396514892578,
+  "median_adam_ms": 3.161631941795349,
+  "median_tokens_per_second": 2695.797357125845,
+  "mean_measured_loss": 2.989813470840454,
+  "final_measured_loss": 2.80613374710083,
+  "peak_allocated_gb": 12.41602897644043,
+  "optimizer_structure": {
+    "muon_param_count": 1474560000,
+    "adam_param_count": 83051200,
+    "muon_matrix_count": 192,
+    "shape_groups": [
+      {
+        "oriented_shape": [
+          1600,
+          1600
+        ],
+        "count": 48,
+        "matrix_million_elements_each": 2.56,
+        "example_names": [
+          "transformer.h.0.attn.c_proj.weight",
+          "transformer.h.1.attn.c_proj.weight",
+          "transformer.h.2.attn.c_proj.weight",
+          "transformer.h.3.attn.c_proj.weight"
+        ]
+      },
+      {
+        "oriented_shape": [
+          1600,
+          4800
+        ],
+        "count": 48,
+        "matrix_million_elements_each": 7.68,
+        "example_names": [
+          "transformer.h.0.attn.c_attn.weight",
+          "transformer.h.1.attn.c_attn.weight",
+          "transformer.h.2.attn.c_attn.weight",
+          "transformer.h.3.attn.c_attn.weight"
+        ]
+      },
+      {
+        "oriented_shape": [
+          1600,
+          6400
+        ],
+        "count": 96,
+        "matrix_million_elements_each": 10.24,
+        "example_names": [
+          "transformer.h.0.mlp.c_fc.weight",
+          "transformer.h.0.mlp.c_proj.weight",
+          "transformer.h.1.mlp.c_fc.weight",
+          "transformer.h.1.mlp.c_proj.weight"
+        ]
+      }
+    ]
+  }
+}
